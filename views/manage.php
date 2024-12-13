@@ -31,7 +31,7 @@ $total_funds = $row['total_funds'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Church|Funds</title>
 
-  <link rel="stylesheet" href="../fontawesome-free-6.5.2-web/css/all.min.css">
+  <link rel="stylesheet" href="../assets/fontawesome-free-6.5.2-web/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>

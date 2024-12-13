@@ -5,8 +5,8 @@
       <li class="dropdown-container">
           <a class="dropdown-toggle">Admin</a>
           <ul class="dropdown">
-              <li><a href="account_management.php"><i class="fa-solid fa-user"></i> Account</a></li>
-              <li><a href="logout.php" onclick="return confirm('Are you sure to logout?');"><i class="fa-solid fa-right-from-bracket"></i> Log out</a></li>
+              <li><a href="../views/account_management.php"><i class="fa-solid fa-user"></i> Account</a></li>
+              <li><a href="../logout.php" onclick="return confirm('Are you sure to logout?');"><i class="fa-solid fa-right-from-bracket"></i> Log out</a></li>
           </ul>
       </li>
   </ul>
