@@ -125,17 +125,20 @@ if(isset($_SESSION['id']) && isset($_SESSION['username'])){
           // * Views (OPTIONAL)
           // * Sub-Queries (OPTIONAL)
           // * Query Optimization
+          // * Dynamic Queries
           
+          // mao ni ang wildcards --
             $search_query = "WHERE 1";
             if(isset($_GET['search_name']) && !empty($_GET['search_name'])){
                 $search_name = mysqli_real_escape_string($connection, $_GET['search_name']);
                 $search_query .= " AND spender_name LIKE '%$search_name%'";
             }
-            // Search by year
+            // partitions by year
             if(isset($_GET['search_year']) && !empty($_GET['search_year'])){
               $search_year = mysqli_real_escape_string($connection, $_GET['search_year']);
               $search_query .= " AND YEAR(expenses_date) = '$search_year'";
             }
+            
             $select_expenses = mysqli_query($connection, "
               SELECT expenses.*, 
               categories.category_name, (SELECT total_funds FROM total_funds_view) - (SELECT SUM(expenses_amount) FROM expenses) as balance 

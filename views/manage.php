@@ -4,7 +4,6 @@ include "../config/connect.php";
 
 if(isset($_SESSION['id']) && isset($_SESSION['username'])){
 
-// Get treasurer details
 $sql = "SELECT name, image_path FROM treasurer WHERE id = 1";
 $result = $connection->query($sql);
 
